@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body, html {
@@ -37,8 +38,14 @@ body, html {
 }
 
 .content h1 {
-    font-size: 3rem;
+    font-size: 120px;
     margin-bottom: 20px;
+    transition: 0.3s;
+}
+.content h1:hover {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    
 }
 
 .content a {
@@ -54,4 +61,18 @@ body, html {
 
 .content a:hover {
     background-color: #e67e22;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
 }
